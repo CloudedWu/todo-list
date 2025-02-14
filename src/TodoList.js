@@ -79,36 +79,39 @@ function Todo ({todos,todo,setTodos,handleChangeTodo}) {
   );
 }
 
-export default function TodoList({ newTodo, setNewTodo, todos, setTodos,handleChangeTodo }) {
+export default function TodoList({ newTodo, setNewTodo, todos, setTodos, handleChangeTodo }) {
   return (
     <>
       <h2>未完成</h2>
       <ul>
-      { todos.map((todo) => 
-       { if (todo.done === false)
-        {return (<li key={todo.id}>
-        <Todo 
-        todos={todos}
-        todo={todo}
-        setTodos={setTodos}
-        handleChangeTodo={handleChangeTodo}/>
-        </li>) } 
-        }
+        {todos.map((todo) => 
+          todo.done === false ? (
+            <li key={todo.id}>
+              <Todo 
+                todos={todos}
+                todo={todo}
+                setTodos={setTodos}
+                handleChangeTodo={handleChangeTodo}
+              />
+            </li>
+          ) : null
         )}
       </ul>
       <h2>已完成</h2>
       <ul>
-      { todos.map((todo) => 
-       { if (todo.done === true)
-        {return (<li key={todo.id}>
-        <del><Todo 
-        todos={todos}
-        todo={todo}
-        setTodos={setTodos}
-        handleChangeTodo={handleChangeTodo}/>
-        </del>
-        </li>) } 
-        }
+        {todos.map((todo) => 
+          todo.done === true ? (
+            <li key={todo.id}>
+              <del>
+                <Todo 
+                  todos={todos}
+                  todo={todo}
+                  setTodos={setTodos}
+                  handleChangeTodo={handleChangeTodo}
+                />
+              </del>
+            </li>
+          ) : null
         )}
       </ul>
     </>
