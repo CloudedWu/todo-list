@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 function Todo({ todo }) {
   const [isEditing, setIsEditing] = useState(false);
-  const [newText, setNewText] = useState(todo.text);
   const dispatch = useDispatch();
 
   function handleDeleteTodo(taskId) {
@@ -18,7 +17,6 @@ function Todo({ todo }) {
   }
 
   function handleEdit(e) {
-    setNewText(e.target.value);
     dispatch(edittodo({
       ...todo,
       text: e.target.value
