@@ -1,0 +1,61 @@
+.box {
+  font-family: 'handwriting', sans-serif;
+  background-color: #ffd4db;
+  background-image: url('../images/jiyi.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 40%;
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin: 20px;
+    width: 350px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .back {
+      width: 40px;
+      height: 40px;
+      background-color: #ffffff;
+      color: #606266;
+      border: none;
+      border-radius: 20px;
+      font-size: larger;
+    }
+  }
+
+  .content {
+    width: 320px;
+    height: 350px;
+    color: #606266;
+    background-color: #ffffff;
+    font-size: large;
+    border-radius: 20px;
+  }
+}
+
+.text {
+  flex: 1;
+  height: 50px;
+  color: #606266;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff00;
+  color: #606266;
+  font-size: larger;
+  border: none;
+}

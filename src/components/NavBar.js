@@ -16,7 +16,7 @@ export default function NavBar() {
 
   return (
     <div>
-      <Tabs defaultActiveKey="1" items={items}/>
+      <Tabs defaultActiveKey="1" items={items} />
     </div>
   );
 }
