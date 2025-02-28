@@ -8,7 +8,7 @@ export default function About() {
       <h2>hello!</h2>
       <button>nothing</button>
       <p>测试测试</p>
-      <p>devdev</p>
+      <p>test分支</p>
     </div>
   )
 }
