@@ -7,8 +7,7 @@ export default function About() {
       <h1>test message</h1>
       <h2>hello!</h2>
       <button>nothing</button>
-      <p>测试测试</p>
-      <p>test分支</p>
+      <p>主分支</p>
     </div>
   )
 }
