@@ -114,7 +114,7 @@ export default function TodoContent() {
         style={{ width: '100%', marginTop: 10 }}
       />
     );
-    buttonContent = '保存';
+    buttonContent = <SaveOutlined />;
   } else {
     contentArea = <p>{todo.content}</p>;
     buttonContent = <EditOutlined />;
