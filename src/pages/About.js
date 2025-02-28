@@ -6,6 +6,7 @@ export default function About() {
       <h1>Hello!world</h1>
       <h1>test message</h1>
       <h2>hello!</h2>
+      <button>nothing</button>
     </div>
   )
 }
