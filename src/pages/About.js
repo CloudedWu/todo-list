@@ -5,6 +5,7 @@ export default function About() {
     <div>
       <h1>Hello!world</h1>
       <button>nothing</button>
+      <p>devdev</p>
     </div>
   )
 }
