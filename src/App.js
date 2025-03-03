@@ -3,6 +3,8 @@ import About from "./pages/About"
 import NavBar from "./components/NavBar"
 import { Routes, Route } from 'react-router-dom'
 import TodoContent from "./pages/TodoContent"
+import { getTasks, createTask, updateTask, deleteTask } from './api';
+
 
 export default function App() {
   return (
