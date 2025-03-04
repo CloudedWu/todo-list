@@ -2,7 +2,25 @@ import React from 'react';
 import { Input, Space } from 'antd';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import './SearchTodo.scss';
 const { Search } = Input;
+
+function SearchList (search, filteredTodos)  {
+  if (search) {
+    return (
+      <ul className='search-list'>
+        {filteredTodos.map((todo) => (
+          <li key={todo.id}>
+            <Link to={`/TodoContent/${todo.id}`}>{todo.text}</Link>
+          </li>
+        ))}
+      </ul>
+    );
+  } else {
+    return null;
+  }
+}
 
 export default function SearchTodo() {
   const [search, setSearch] = useState('');
@@ -28,18 +46,12 @@ export default function SearchTodo() {
     <Space direction="vertical"
       style={{ marginBottom: 10 }}>
       <Search
-        placeholder="input search text"
+        placeholder="搜索待办事项"
         value={search}
         onChange={(e) => handleSearch(e)}
         enterButton
       />
-      <ul>
-        {filteredTodos.map((todo) => (
-          <li key={todo.id}>
-            {todo.text}
-          </li>
-        ))}
-      </ul>
+      {SearchList(search, filteredTodos)}
     </Space>
   );
 }

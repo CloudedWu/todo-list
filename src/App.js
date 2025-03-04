@@ -7,7 +7,7 @@ import TodoContent from "./pages/TodoContent"
 export default function App() {
   return (
     <div>
-      <NavBar />
+      
       <Routes>
         <Route path="/TodoApp" element={<TodoApp />} />
         <Route path="/about" element={<About />} />
